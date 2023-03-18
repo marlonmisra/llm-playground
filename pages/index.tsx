@@ -1,10 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+
 import SearchExperience from '../components/SearchExperience';
 
-const inter = Inter({ subsets: ['latin'] })
 
 const handleSearchSubmit = (searchText: string) => {
   // Perform search with searchText
@@ -24,12 +22,14 @@ export default function Home() {
       
       <main className={styles.main}>
         <h1>Copilot Help Center Assistant</h1>
+        <h2> This product lets you search the knowledge base of Copilot.</h2>
 
         <div>
           <SearchExperience onSubmit={handleSearchSubmit} />
         </div>
         
       </main>
+
     </>
   )
 }
